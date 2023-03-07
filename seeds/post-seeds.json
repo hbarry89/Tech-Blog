@@ -1,0 +1,16 @@
+[
+  {
+    "title": "MVC",
+    "body": "MVC stands for Model View Controller."
+  },
+  {
+    "title": "HTTP Requests",
+    "body": "GET, POST, PUT, DELETE are very important HTTP requests."
+  },
+  {
+    "title": "CRUD",
+    "body": "CRUD means Create, Read, Update, Delete."
+  }
+]
+
+

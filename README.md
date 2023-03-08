@@ -29,7 +29,7 @@ requesting a CMS-style blog site so that they can publish articles, blog posts, 
 - AskBCS Learning Assistants
 
 ### Assets :sparkles:
-- Bootstrap
+- [Bootstrap](https://getbootstrap.com/) Framework
 - [Express Handlebars](https://www.npmjs.com/package/express-handlebars) Package
 - [MySQL2](https://www.npmjs.com/package/mysql2) Package
 - [Sequelize](https://www.npmjs.com/package/sequelize) Package

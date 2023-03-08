@@ -1,4 +1,42 @@
 * {
-    background-color: rgb(255, 250, 239);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+h1 {
+    background-color:thistle;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+a {
+    color: black;
+}
+
+.list-group {
+    margin: 10px;
+    width: 800px;
+}
+
+.post-form {
+    margin: 40px;
+    border: solid black 2px;
+    border-radius: 2rem;
+    padding: 20px;
+    width: 500px;
+}
+
+#del-btn {
+    float: right !important;
+    width: 30px;
+}
+
+.list {
+    margin: 5px;
+    padding: 20px;
+    border: solid black 2px;
+    border-radius: 2rem;
+}

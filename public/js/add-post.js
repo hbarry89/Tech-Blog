@@ -19,5 +19,9 @@ addPostForm.addEventListener('submit', function(e) {
         },
       })
       .then(res => res.json())
-      .then(data => data? alert('post added') : alert("not working "))
+      .then(data => data ? alert('Your post has been added!') : alert("Oops, something is not working..."))
 });
+
+document.querySelector('#del-btn').addEventListener('click', function(e) {
+  console.log(e.target.dataset.id);
+})

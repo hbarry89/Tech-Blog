@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const Post = require('../../models/Post');
 
+// /api/post
+
 // route to create/add a post
 router.post('/', async (req, res) => {
   try {

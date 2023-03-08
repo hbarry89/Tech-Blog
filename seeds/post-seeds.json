@@ -1,15 +1,18 @@
 [
   {
     "title": "MVC",
-    "body": "MVC stands for Model View Controller."
+    "body": "MVC stands for Model View Controller.",
+    "userId": 1
   },
   {
     "title": "HTTP Requests",
-    "body": "GET, POST, PUT, DELETE are very important HTTP requests."
+    "body": "GET, POST, PUT, DELETE are very important HTTP requests.",
+    "userId": 2
   },
   {
     "title": "CRUD",
-    "body": "CRUD means Create, Read, Update, Delete."
+    "body": "CRUD means Create, Read, Update, Delete.",
+    "userId": 3
   }
 ]
 

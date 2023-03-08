@@ -2,7 +2,7 @@
 
 const addPostForm = document.querySelector('#add-post');
 
-addPostForm.addEventListener('click', function(e) {
+addPostForm.addEventListener('submit', function(e) {
     e.preventDefault();
     alert("hello");
 });

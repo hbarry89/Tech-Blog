@@ -4,7 +4,7 @@ const titleEl = document.querySelector('#title');
 const bodyEl = document.querySelector('#body');
 
 addPostForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+    // e.preventDefault();
     // alert("hello");
     const postInfo = {
         title: titleEl.value,

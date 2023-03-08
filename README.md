@@ -22,12 +22,14 @@ requesting a CMS-style blog site so that they can publish articles, blog posts, 
 
 ### Resources :books:
 - Bootcamp Materials
+- Review by instructor in office hours.
 - Demonstration by TA in class
 - The following folders were provided by TA in class: *config*, *db*, *models*, *utils*, and *.env* file.
 - Tutor
 - AskBCS Learning Assistants
 
 ### Assets :sparkles:
+- Bootstrap
 - [Express Handlebars](https://www.npmjs.com/package/express-handlebars) Package
 - [MySQL2](https://www.npmjs.com/package/mysql2) Package
 - [Sequelize](https://www.npmjs.com/package/sequelize) Package

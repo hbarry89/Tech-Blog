@@ -13,15 +13,6 @@ router.get('/', async (req, res) => {
   }
 })
 
-// router.get('/', async (req, res) => {
-//   try {
-//     const postData = await Post.findAll();
-//     res.json(postData)
-//   } catch(err){
-//     res.status(500).json(err);
-//   }
-// })
-
 // Act 18
 // router.get('/', async (req, res) => {
 //   try {

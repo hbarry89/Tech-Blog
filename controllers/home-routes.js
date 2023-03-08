@@ -6,11 +6,22 @@ const { Post, Comment, User } = require('../models');
 router.get('/', async (req, res) => {
   try {
     const postData = await Post.findAll();
-    res.json(postData)
+    const posts = postData.map(post => post.get({plain:true}))
+    res.render('homepage', {posts})
   } catch(err){
     res.status(500).json(err);
   }
 })
+
+// router.get('/', async (req, res) => {
+//   try {
+//     const postData = await Post.findAll();
+//     res.json(postData)
+//   } catch(err){
+//     res.status(500).json(err);
+//   }
+// })
+
 // Act 18
 // router.get('/', async (req, res) => {
 //   try {

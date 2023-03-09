@@ -8,7 +8,7 @@ requesting a CMS-style blog site so that they can publish articles, blog posts, 
 
 ## Usage
 
-- [Click here](*) to navigate to the live link of this repository.
+- [Click here](https://desolate-stream-93871.herokuapp.com/) to navigate to the live link of this repository.
 
 ---------------------------
 

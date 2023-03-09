@@ -35,7 +35,13 @@ router.get('/', async (req, res) => {
 
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
-    res.render('dashboard')
+    req.session.save(() => {
+      if(req.session.loggedIn) {
+        res.render('dashboard', {
+          loggedIn: req.session.loggedIn,
+       })
+      }
+    })
   } catch(err){
     res.status(500).json(err);
   }

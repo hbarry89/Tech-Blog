@@ -47,6 +47,15 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 })
 
+// router.get('/dashboard', async (req, res) => {
+//   try {
+//         res.render('dashboard')
+//       }
+//   catch(err){
+//     res.status(500).json(err);
+//   }
+// })
+
 router.get('/login', async (req, res) => {
   try {
     res.render('login')

@@ -7,6 +7,11 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    background-color:gray;
+    text-align: center;
+}
+
 nav {
     text-align: center;
     margin-bottom: 30px;
@@ -14,6 +19,7 @@ nav {
 
 a {
     color: black;
+    text-decoration: none;
 }
 
 .list-group {

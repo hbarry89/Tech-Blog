@@ -8,7 +8,8 @@ router.get('/', async (req, res) => {
   try {
     const postData = await Post.findAll();
     const posts = postData.map(post => post.get({plain:true}))
-    res.render('homepage', {posts})
+    console.log(posts);
+    res.render('homepage', {posts, loggedIn: req.session.loggedIn})
   } catch(err){
     res.status(500).json(err);
   }
@@ -33,32 +34,32 @@ router.get('/', async (req, res) => {
 //   }
 // });
 
-router.get('/dashboard', withAuth, async (req, res) => {
-  try {
-    req.session.save(() => {
-      if(req.session.loggedIn) {
-        res.render('dashboard', {
-          loggedIn: req.session.loggedIn,
-       })
-      }
-    })
-  } catch(err){
-    res.status(500).json(err);
-  }
-})
-
-// router.get('/dashboard', async (req, res) => {
+// router.get('/dashboard', withAuth, async (req, res) => {
 //   try {
-//         res.render('dashboard')
+//     req.session.save(() => {
+//       if(req.session.loggedIn) {
+//         res.render('dashboard', {
+//           loggedIn: req.session.loggedIn,
+//        })
 //       }
-//   catch(err){
+//     })
+//   } catch(err){
 //     res.status(500).json(err);
 //   }
 // })
 
+router.get('/dashboard', withAuth, async (req, res) => {
+  try {
+        res.render('dashboard', {loggedIn: req.session.loggedIn})
+      }
+  catch(err){
+    res.status(500).json(err);
+  }
+})
+
 router.get('/login', async (req, res) => {
   try {
-    res.render('login')
+    res.render('login', {loggedIn: req.session.loggedIn})
   } catch(err){
     res.status(500).json(err);
   }
@@ -66,7 +67,9 @@ router.get('/login', async (req, res) => {
 
 router.get('/logout', async (req, res) => {
   try {
-    res.render('logout')
+    req.session.destroy(()=>{
+      res.status(204).end();
+    })
   } catch(err){
     res.status(500).json(err);
   }

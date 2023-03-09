@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Post, Comment, User } = require('../models');
+const withAuth = require('../utils/auth')
 
 // route to get all posts
 
@@ -32,7 +33,7 @@ router.get('/', async (req, res) => {
 //   }
 // });
 
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   try {
     res.render('dashboard')
   } catch(err){

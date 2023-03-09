@@ -1,10 +1,10 @@
-<ul class="list-group">
+<ul class="list-group post-delete">
   {{#each posts as |post|}}
   <div class="list">
   <h5 class="mb-1">{{post.title}}</h5>
   <li class="list-group-item">{{post.body}}</li>
   <small class="text-muted">By {{post.userId}}, on {{post.timestamps}}</small>
-  <button id="del-btn" data-id={{post.id}}>X</button>
+  <button class="del-btn" data-id={{post.id}}>X</button>
   </div>
   {{/each}}
 </ul>

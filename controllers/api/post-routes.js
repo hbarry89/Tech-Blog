@@ -1,10 +1,21 @@
 const router = require('express').Router();
 const Post = require('../../models/Post');
+const withAuth = require('../../utils/auth')
 
 // /api/post
 
+router.get('/', async (req, res) => {
+  try {
+      const postData = await Post.findAll();
+      const posts = postData.map(post => post.get({plain:true}))
+    res.status(200).json(posts);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 // route to create/add a post
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const postData = await Post.create({
       title: req.body.title,
@@ -17,7 +28,7 @@ router.post('/', async (req, res) => {
 });
 
 // This action method is the Controller. It accepts input and sends data to the Model and the View.
-router.put('/:id', async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
   // It is sending the data to the Model so that one post can be updated with new data in the database.
   try {
     const post = await Post.update(
@@ -38,7 +49,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.destroy({
       where: {

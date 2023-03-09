@@ -22,6 +22,18 @@ addPostForm.addEventListener('submit', function(e) {
       .then(data => data ? alert('Your post has been added!') : alert("Oops, something is not working..."))
 });
 
-document.querySelector('#del-btn').addEventListener('click', function(e) {
-  console.log(e.target.dataset.id);
+document.querySelector('.post-delete').addEventListener('click', function(e) {
+  if (e.target.matches('button')) {
+    fetch(`/api/post/${e.target.dataset.id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then(res => res.json())
+    .then(data => {
+      data ? alert('Your post has been deleted!') : alert("Oops, something is not working...")
+      document.location.replace('/')
+    })
+  }
 })

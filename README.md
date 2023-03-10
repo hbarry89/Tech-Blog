@@ -25,7 +25,13 @@ The following account has been created for your convienence to test the applicat
 
 ---------------------------
 
-- When you click on **Login** from the navigation bar, you are presented with a Signup form and a Login form:
+- When you click on **Login** from the navigation bar, you are presented with a Signup form and a Login form, when you sign up with an account using the Signup form, you will get a confirmation message:
+
+<img src="./demo-images/demo00.png" width="800" height="400">
+
+---------------------------
+
+- When you log in with your account using the Login form, you will get a confirmation message:
 
 <img src="./demo-images/demo1.png" width="800" height="400">
 
